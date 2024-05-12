@@ -4,7 +4,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatInputModule } from '@angular/material/input'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { DateTime } from 'luxon' // Import AppComponent here
+import { DateTime } from 'luxon'
 
 describe('AppComponent', () => {
   let component: AppComponent
@@ -13,8 +13,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule, MatInputModule, MatDatepickerModule, BrowserAnimationsModule],
-      declarations: [], // Remove AppComponent from declarations array
-      providers: [], // If you have any providers, add them here
+      declarations: [],
+      providers: [],
     }).compileComponents()
   })
 
