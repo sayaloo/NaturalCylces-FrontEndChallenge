@@ -1,6 +1,19 @@
-
-<main class="main">
-  <h1>Hello! 👋</h1>
+<main>
+  <div class="countdown">
+    <h1 class="countdown__title">{{ eventName }}</h1>
+    <h1 class="countdown__timer">{{ countdownText }}</h1>
+    <div class="countdown__inputs">
+      <mat-form-field class="countdown__field">
+        <input matInput type="text" placeholder="Event Name" [(ngModel)]="eventName" (input)="onEventNameChange(eventName)">
+      </mat-form-field>
+      <mat-form-field class="countdown__field">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="endDate" [min]="today" (dateChange)="onDatePickerChange('change', $event)">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
 </main>
 
 <router-outlet />

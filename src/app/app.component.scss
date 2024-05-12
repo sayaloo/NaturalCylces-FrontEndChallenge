@@ -1,13 +1,53 @@
+*{
+  box-sizing: border-box;
+}
 
-main {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.countdown {
+  text-align: center;
+  height: 100vh;
+  padding: 15px 0;
+  background-color: rgb(245,245,245);
+  //background-color: red;
 
-  h1 {
-    font-size: 6rem;
+  &__title{
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    color: #72035d;
+  }
+
+  &__timer{
+    font-weight: 200;
+    margin: 0 10px 0 0;
+    font-size: 3.5vw;
+  }
+
+  &__inputs{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__field{
+    width: 300px;
+    &:first-child{
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .countdown{
+    &__inputs{
+      flex-direction: column;
+    }
+
+    &__field{
+      &:first-child{
+        margin-right: 0;
+      }
+    }
   }
 }
