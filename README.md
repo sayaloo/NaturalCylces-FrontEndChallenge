@@ -1,4 +1,8 @@
 
+# Natural Cycles front-end challenge
+
+A demo version of the app is deployed on this [demo](https://master--countdown-naturalcycles.netlify.app/) link
+
 ## Running the app
 
 Install packages by running `npm install`. Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
